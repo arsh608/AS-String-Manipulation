@@ -1,0 +1,18 @@
+        DECLARE str1, str2, str3 : String
+
+        str1 = ""
+        str2 = ""
+        str3 = ""
+
+        OUTPUT("Enter the string: ")
+        INPUT str1
+
+        If Length(str1) <= 2 Then
+            OUTPUT("The answer is: " , str1)
+        Else
+            str2 = Left(str1, 2)
+            str3 = Right(str1, 2)
+            OUTPUT("The answer is: " , str2 , str3)
+
+        End If
+        END
