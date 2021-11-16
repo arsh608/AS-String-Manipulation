@@ -1,0 +1,24 @@
+        Declare str1, V : String
+        Declare thischar : Char
+        Declare count, VowelCount : Integer
+
+        str1 = ""
+        thischar = ''
+        VowelCount = 0
+        count = 0
+        V = "AEIOU"
+
+        OUTPUT("Enter the string to count Vowels: ")
+        INPUT str1
+        str1 = UCase(str1)
+
+        For count = 1 To Length(str1)
+            thischar = Mid(str1, count, 1)
+            If LOCATE(V, thischar) > 0 Then
+                VowelCount = VowelCount + 1
+            End If
+        Next
+
+        OUTPUT("Vowels in the given string are= " , VowelCount)
+ 
+        END
