@@ -1,0 +1,33 @@
+        Declare count, alphapos : Integer
+        Declare str1, alpha : String
+        Declare thischar : Character
+        Declare isPangram : Boolean
+
+        str1 = ""
+        thischar = ''
+        isPangram = True
+        count = 0
+        alphapos = 0
+        alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+        OUTPUT ("Enter the string to check: ")
+        INPUT str1
+        str1 = UCase(str1)
+
+
+        For count = 1 To Length(alpha)
+            thischar = Mid(alpha, count, 1)
+            alphapos = LOCATE(str1, thischar)
+            If alphapos = 0 Then
+                isPangram = False
+                Exit For
+            End If
+        Next
+
+        If isPangram = True Then
+            OUTPUT ("Entered string is a Pangram.")
+        Else
+            OUTPUT ("Entered string is NOT a Pangram.")
+        End If
+       
+        END
