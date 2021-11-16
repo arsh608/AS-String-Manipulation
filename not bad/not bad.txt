@@ -1,0 +1,45 @@
+        DECLARE str1, str2 : String
+        DECLARE count, notPos, badPos : Integer
+        DECLARE thischar : Character
+
+        str1 = ""
+        str2 = ""
+        thischar = ''
+        count = 0
+        badPos = 0
+        notPos = 0
+
+        OUTPUT("Enter the string: ")
+        INPUT str1
+        str1 = LCase(str1)
+
+        notPos = LOCATE(str1, "not")
+        If notPos = 0 Then
+            OUTPUT("String does not contain the word 'not' ")
+            END
+        Else
+            badPos = LOCATE(str1, "bad")
+            If badPos = 0 Then
+                OUTPUT("String does not contain the word 'bad' ")
+                END
+
+            ElseIf notPos > badPos Then
+                OUTPUT("String Unchanged: " , str1)
+            End If
+        End If
+  
+        If notPos < badPos Then
+            For count = 1 To LENGTH(str1)
+                thischar = Mid(str1, count, 1)
+
+                If count = notPos Then
+                    str2 = str2 + "good"
+                    count = badPos + 3
+                Else
+                    str2 = str2 + thischar
+                End If
+            Next
+            OUTPUT("The processed string is: " , str2)
+        End If
+
+        END
