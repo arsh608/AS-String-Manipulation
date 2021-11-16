@@ -1,0 +1,28 @@
+        Declare str1, str2, str3, str4, i, j : String
+        Declare count1, count2 : Integer
+
+        str1 = ""
+        str2 = ""
+        str3 = ""
+        str4 = ""
+        count1 = 0
+        count2 = 0
+        i = ""
+        j = ""
+
+
+        OUTPUT("Enter ONLY the first word: ")
+        INPUT str1
+        OUTPUT("Enter ONLY the second word: ")
+        INPUT str2
+
+        i = Left(str1, 2)
+        j = Left(str2, 2)
+
+        str3 = j + Right(str1, (Len(str1) - 2))
+        str4 = i + Right(str2, (Len(str2) - 2))
+
+
+
+        OUTPUT("The processed string is: " , str3 , " " , str4)
+        END
