@@ -1,0 +1,29 @@
+        Declare str1, finalstr : String
+        Declare thischar, char1, aceteric : Character
+        Declare counter : Integer
+
+        str1 = ""
+        finalstr = ""
+        thischar = ''
+        char1 = ''
+        counter = 0
+        aceteric = '*'
+
+        OUTPUT("Enter the string: ")
+        INPUT str1
+        str1 = Ucase(str1)
+        char1 = Left(str1, 1)
+        finalstr = char1
+
+        For counter = 2 To Length(str1)
+            thischar = Mid(str1, counter, 1)
+            If thischar = char1 Then
+                finalstr = finalstr + aceteric
+            Else 
+                finalstr = finalstr + thischar
+
+            End If
+        Next
+
+        OUTPUT("The processed string is: " , LCase(finalstr))
+        END
