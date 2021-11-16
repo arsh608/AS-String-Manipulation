@@ -1,0 +1,30 @@
+        Declare str1, str2, char1, char2, thischar: String
+        Declare count: Integer
+
+        str1 = ""
+        str2 = ""
+        char1 = ""
+        char2 = ""
+        thischar = ""
+        count = 0
+
+        OUTPUT ("Enter the String: ")
+        INPUT str1
+
+        OUTPUT ("Enter the character to remove: ")
+        INPUT char1
+
+        OUTPUT ("Enter the character to replace with: ")
+        INPUT char2
+
+        For count = 1 To Length(str1)
+            thischar = Mid(str1, count, 1)
+            If thischar = char1 Then
+                thischar = char2
+            End If
+            str2 = str2 & thischar
+        Next
+
+        OUTPUT ("Processed string = " , str2)
+
+        END
