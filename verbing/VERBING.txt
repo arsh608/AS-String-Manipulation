@@ -1,0 +1,25 @@
+        Declare str1, str2, verb : String
+
+        str1 = ""
+        str2 = ""
+        verb = "ing"
+
+        OUTPUT("Enter the string: ")
+        INPUT str1
+
+        If Length(str1) < 3 Then
+            OUTPUT("The final string is: " , str1)
+        Else
+            str2 = Right(str1, 3)
+
+            If str2 = verb Then
+                str1 = str1 + "ly"
+            Else
+                str1 = str1 + verb
+            End If
+
+            OUTPUT("The processed string is: " , str1)
+
+        End If
+
+        END
