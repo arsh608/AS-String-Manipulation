@@ -1,0 +1,13 @@
+        DECLARE D : Integer
+
+
+        D = 0
+
+        OUTPUT("Enter Number of DONUTS: ")
+        INPUT D
+        If D >= 0 And D < 10 Then
+            OUTPUT(D , " DONUTS are ordered")
+        ElseIf D >= 10 Then
+            OUTPUT("Many DONUTS are ordered")
+        End If
+        END
