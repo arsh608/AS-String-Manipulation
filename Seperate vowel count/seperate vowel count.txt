@@ -1,0 +1,41 @@
+        Declare str1 : String
+        Declare thischar : Character
+        Declare count, VowelCount, Acount, Ecount, Icount, Ocount, Ucount : Integer
+
+        str1 <-- ""
+        thischar <-- ''
+        VowelCount <-- 0
+        count <-- 0
+        Acount <-- 0
+        Ecount <-- 0
+        Icount <-- 0
+        Ocount <-- 0
+        Ucount <-- 0
+
+        OUTPUT("Enter the string to count Vowels: ")
+        INPUT str1
+        str1 <-- UCase(str1)
+
+        For count = 1 To LENGTH(str1)
+          thischar <-- Mid(str1, count, 1)
+
+          CASE OF (thischar)
+          A : Acount <-- Acount + 1
+          E : Ecount <-- Ecount + 1
+          I : Icount <-- Icount + 1
+          O : Ocount <-- Ocount + 1
+          U : Ucount <-- Ucount + 1
+
+          END CASE
+
+        Next
+
+        VowelCount <-- Acount + Ecount + Icount + Ocount + Ucount
+        OUTPUT("Total Vowels in the given string are= " , VowelCount)
+        OUTPUT("A= " , Acount)
+        OUTPUT("E= " , Ecount)
+        OUTPUT("I= " , Icount)
+        OUTPUT("O= " , Ocount)
+        OUTPUT("U= " , Ucount)
+
+        END
