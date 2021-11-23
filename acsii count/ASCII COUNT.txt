@@ -1,0 +1,42 @@
+        Declare str1 : String
+        Declare x, con : Character
+        Declare con1, count, alphacount, digitcount, special : Integer
+
+        str1 <-- ""
+        x <-- ''
+        con <-- ''
+        con1 <-- 0
+        count <-- 0
+        alphacount <-- 0
+        digitcount <-- 0
+        special <-- 0
+
+        OUTPUT("Enter string to search in: ")
+        INPUT str1
+        str1 <-- UCase(str1)
+        OUTPUT("Enter the character to count in: ")
+        INPUT con
+        con <-- UCase(con)
+
+        For count = 1 To Length(str1)
+            x <-- Mid(str1, count, 1)
+            If x = con Then
+                con1 <-- con1 + 1
+            End If
+
+            If (x >= "A" And x <= "Z") Then
+                alphacount <-- alphacount + 1
+            ElseIf x >= "0" And x <= "9" Then
+                digitcount <-- digitcount + 1
+            Else special <-- special + 1
+
+            End If
+
+        Next
+        OUTPUT(con , " appeared " , con1 , " times in the string")
+        OUTPUT("total charcters in the string are: " , (alphacount + digitcount + special))
+        OUTPUT("Alphabats in the string are: " , alphacount)
+        OUTPUT("Digits in the string are: " , digitcount)
+        OUTPUT("Special Characters in the string are: " , special)
+        
+        END
